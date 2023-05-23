@@ -1,0 +1,143 @@
+*{
+    margin: 0px;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    color:white
+}
+
+.Imagem{
+    background-image: url(imagens/OIP.jpg);
+    background-size: cover;
+}
+
+ul{
+    list-style: none;
+    padding: 0px;
+    transition: all 1s;
+}
+
+td{
+    width:50%;
+}
+
+h1{
+    padding: 12px;
+}
+
+nav{
+    background-color: rgb(0, 0, 0);
+    padding: 10px;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+    box-shadow: 1px 2px 5px rgb(255, 255, 255);
+}
+
+h1, p{
+    color:rgb(233, 233, 233)
+}
+
+nav, ul{
+    display: flex;
+    flex-direction: row;
+}
+
+li{
+    padding: 20px;
+}
+
+li:hover, 
+h1:hover,
+button:hover{
+    cursor: pointer;
+    opacity: 0.8;
+    background-color: rgb(107, 107, 107);
+}
+
+button{
+    background: transparent;
+    color: white;
+    border: none;
+    font-size: 30px;
+    position: absolute;
+    display: none;
+    right: 10px;
+}
+
+.tabela1{
+    width: 100%;
+    padding: 15px;
+}
+
+.Img1{
+    border: solid rgb(80, 79, 79) 5px;
+    box-shadow: 1px 2px 5px rgb(247, 247, 247); 
+}
+
+.Img2{
+    border: solid rgb(80, 79, 79) 5px;
+    box-shadow: 1px 2px 5px rgb(247, 247, 247); 
+}
+
+.texto1{
+    border: solid rgb(59, 59, 59);
+    background-color: rgb(59, 59, 59);
+    border-radius: 15px;
+    box-shadow: 1px 2px 5px rgb(247, 247, 247);   
+}
+
+.texto2{
+    border: solid rgb(59, 59, 59);
+    background-color: rgb(59, 59, 59);
+    border-radius: 15px;
+    box-shadow: 1px 2px 5px rgb(247, 247, 247);   
+}
+
+button:focus ~ ul{
+    height: 250px;
+}
+
+@media (max-width: 730px) {
+
+    nav, ul{
+        flex-direction: column;
+        align-items: unset;
+    }
+
+    ul{
+        height: 0;
+        margin: 0;
+        align-items: left;
+        overflow: hidden;
+    }
+
+    h1{
+        margin: 10px;
+    }
+
+    body{
+        font-size: 14px;
+        background-image: url(Imagens/OIP.jpg);
+        background-size: cover;
+    }
+
+    .Img1{
+        width: 300px;
+        height: 300px;
+    }
+
+    .Img2{
+        width: 300px;
+        height: 300px;
+    }
+
+    button{
+        display: flex;
+        right: 10px;
+        margin-left: 10px;
+        margin-top: 10px;
+    }
+}
