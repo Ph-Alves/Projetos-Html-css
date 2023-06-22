@@ -1,0 +1,192 @@
+/* CS */
+
+:root {
+    --cor-titulo: hsl(35, 67%, 59%);
+    --cor-texto: hsl(212, 33%, 22%);
+    --cor-titulo-2:hsl(22, 51%, 50%);
+    --cor-background:hsl(24, 49%, 86%);
+}
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+body {
+    background-color: var(--cor-background);
+    margin: 0;
+    overflow-x: hidden;
+    width: 100%;
+}
+
+header {
+    position: absolute;
+    width: 100%;
+    padding: 10px 0;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background-color: var(--cor-texto);
+}
+
+.container {
+    max-width: 1280px;
+    margin: auto;
+}
+
+.menu {
+    list-style-type: none;
+    display: flex;
+    margin: 0px 50px;
+    padding: 0;
+    gap: 1rem;
+}
+
+.botao-hamburguer {
+    display: none;
+}
+
+.logo img {
+    width: 100px;
+}
+
+.menu li {
+    margin: 0px 20px;
+}
+
+.menu li a {
+    color: var(--cor-titulo);
+    text-shadow: 1px 0px 2px var(--cor-titulo);
+    text-decoration: none;
+    font-size: 25px;
+    padding: 10px 30px 10px 30px;
+    transition: 0.2s ease-out;
+}
+
+.menu li a:hover {
+    background-color: #383838;
+    border-radius: 20px;
+}
+
+@media (max-width: 1222px) {
+    .menu {
+        margin: 0;
+        gap: 2em;
+
+        position: fixed;
+        z-index: 1000;
+        inset: 0 0 0 30%;
+
+        flex-direction: column;
+        padding: min(30vh, 10rem) 2em;
+
+        background: var(--cor-texto);
+        backdrop-filter: blur(7px);
+
+        transform: translateX(100%);
+        transition: transform 0.35s ease-out;
+        border: solid 1px var(--cor-titulo)
+    }
+
+    .menu[data-visible="true"] {
+    transform: translateX(0%);
+    }
+
+    .botao-hamburguer {
+        display: block;
+        position: fixed;
+        background-image: url(../Imagens/burguer_menu2.svg);
+        background-size: cover;
+        background-color: transparent;
+        background-repeat: no-repeat;
+        border: 0;
+        width: 2rem;
+        aspect-ratio: 1;
+        top: 1.5rem;
+        right: 3rem;
+        z-index: 9998;
+        transition: 0.5s;
+        cursor: pointer;
+    }
+
+    .botao-hamburguer[aria-expanded="true"] {
+        background-image: url(../Imagens/icons8-x-50.png);
+        width: 2rem;
+        background-size: cover;
+        background-position: center;
+    }
+
+    header {
+        position: fixed;
+    }
+
+    .logo img {
+        width: 80px;
+        margin-left: 30px;
+    }
+
+    footer {
+        display: none;
+    }
+
+    .Retangulo {
+        display: none;
+    }
+
+    .menu li a{
+        color: var(--cor-titulo);
+        text-shadow: 1px 0px 2px #ffffff00;
+    }
+
+    /* Página de serviços */
+    .ImagemResultado {
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 750px) {
+    .ImagemResultado {
+        width: 500px;
+    }
+
+    .ImagemResultado {
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 450px) {
+    .ImagemResultado {
+        width: 300px;
+    }
+
+    .sobremimfoto {
+        width: 300px;
+    }
+
+    .menu li {
+        margin: 0;
+    }
+
+    .menu li a {
+        font-size: 20px;
+        padding: 0;
+    }
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
